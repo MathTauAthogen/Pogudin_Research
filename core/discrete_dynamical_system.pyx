@@ -5,11 +5,8 @@ import math
 import numpy as np
 
 def binary_not(val):
-    """Does the binary not operation on val."""
-    if val == 1:#pylint: disable=no-else-return
-        return 0
-    else:
-        return 1
+    """Binary not operation"""
+    return int(val == 1)
 
 def remove(my_list, element):
     """ Removes all instances of element from my_list"""
