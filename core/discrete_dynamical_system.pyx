@@ -1,6 +1,7 @@
 """
 This is my boilerplate code.
 """
+
 import math
 import numpy as np
 
@@ -85,3 +86,22 @@ class Dynamical(object):
     def placeholder(self):
         """ Not enough public methods otherwise"""
         pass
+
+
+def generate_boolean_functions(length):
+    rows = [] """rows"""
+    functionvalues = [] """ values"""
+    for j in range(2**length):
+            rows.append(list(
+            	   [int(i)for i in binary_fixed_length(j,length)]))
+            functionvalues.append(0)
+            rows.append(list(
+            	   [int(i)for i in binary_fixed_length(j,length)]))
+            functionvalues.append(1)
+    """appended twice as it can be 0 or 1 """
+
+    return  rows, functionvalues
+    """ith element of functionvalues is the value for the ith element of row"""
+
+
+

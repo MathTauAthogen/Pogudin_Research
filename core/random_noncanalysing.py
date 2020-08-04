@@ -95,6 +95,27 @@ def is_canalizing(table, var):
             return False
     return len(io_pairs_seen) < 4
 
+def is_canalizing_function(table):
+    for var in range(len(table)):
+        if is_canalizing(table, var):
+            return True
+            break
+    return False
+
+def find_canalizing_depth(table):
+    depth = 0
+    for var in range(len(table)):
+        new_table = table[var:]
+        if is_canalizing(new_table, len(table)-1-var):
+            depth = depth +1
+        if is_canalizing_function(table[var+1:]) == False:
+            break
+    return depth
+
+
+
+
+
 #Main function
 def random_noncanalysing_func(num_vars):
     """Generates a random non-canalysing function on num_vars variables.

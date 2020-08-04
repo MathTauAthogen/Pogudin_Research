@@ -1,4 +1,5 @@
 """Find attractors using the other new method discussed at the meeting on 6/3/18"""
+
 import numpy as np
 import pyximport
 pyximport.install()
