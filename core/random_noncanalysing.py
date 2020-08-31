@@ -88,7 +88,7 @@ def overwrite_at(my_list, index, seq):
 def is_canalizing(table, var):
     """Checks whether var (counting from the right) is a canalizing for a function given by the table"""
     io_pairs_seen = {}
-    for i in xrange(len(table)):
+    for i in range(len(table)):
         inp = (i >> var) % 2
         io_pairs_seen[table[i] * 2 + inp] = 1
         if len(io_pairs_seen) == 4:

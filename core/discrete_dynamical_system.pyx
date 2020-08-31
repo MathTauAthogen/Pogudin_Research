@@ -89,14 +89,12 @@ class Dynamical(object):
 
 
 def generate_boolean_functions(length):
-    rows = [] """rows"""
-    functionvalues = [] """ values"""
+    rows = [] 
+    functionvalues = [] 
     for j in range(2**length):
-            rows.append(list(
-            	   [int(i)for i in binary_fixed_length(j,length)]))
+            rows.append(list([int(i)for i in binary_fixed_length(j,length)]))
             functionvalues.append(0)
-            rows.append(list(
-            	   [int(i)for i in binary_fixed_length(j,length)]))
+            rows.append(list([int(i)for i in binary_fixed_length(j,length)]))
             functionvalues.append(1)
     """appended twice as it can be 0 or 1 """
 
