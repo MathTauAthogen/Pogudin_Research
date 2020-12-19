@@ -14,6 +14,9 @@ def all_numbers_but(exceptions, maxn):
             temp.append(i)
     return temp
 
+def find_canalizing_depth( ):
+
+
 def random_k_canalyzing(num_vars, depth):
     """Method to generate a random k-canalyzing function"""
     if depth == 0:
